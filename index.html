@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Candle — Hyperliquid terminal</title>
+    <meta
+      name="description"
+      content="A desktop terminal for Hyperliquid. Liquidation levels, how top traders are positioned and the wallets you follow sit next to the order ticket."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="Candle — Hyperliquid terminal" />
+    <meta property="og:description" content="Liquidations, positioning and the wallets you follow, next to the order ticket." />
+    <meta property="og:image" content="/assets/terminal-dark-3tJWFAxi.jpg" />
+    <link rel="icon" href="/assets/favicon-DSx5xenb.svg" type="image/svg+xml" />
+    <style>:root{--bg:#fff;--surface:#f5f5f7;--fill:#0000000d;--hairline:#0000001a;--text:#000;--text-2:#6e6e73;--accent:#000;--on-accent:#fff;--long:#087a43;--short:#c9321f;--ease:cubic-bezier(.32, .72, 0, 1);--wide:1200px;--lightningcss-light:initial;--lightningcss-dark: ;color-scheme:light}@media (prefers-color-scheme:dark){:root{--bg:#000;--surface:#161617;--fill:#ffffff17;--hairline:#ffffff1f;--text:#f5f5f7;--text-2:#a1a1a6;--accent:#f5f5f7;--on-accent:#000;--long:#30d158;--short:#ff453a;--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}}*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;margin:0;font:400 17px/1.47 -apple-system,BlinkMacSystemFont,SF Pro Text,Inter,Segoe UI,system-ui,sans-serif}img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}:focus{outline:none}:focus-visible{background-image:linear-gradient(var(--fill), var(--fill));border-radius:8px}.wrap{width:min(var(--wide), 100% - 32px);margin-inline:auto}.num{font-variant-numeric:tabular-nums}header{z-index:10;background:color-mix(in srgb, var(--bg) 80%, transparent);-webkit-backdrop-filter:saturate(180%)blur(20px);position:sticky;top:0}header .wrap{align-items:center;gap:32px;height:64px;display:flex}.lockup{height:24px;color:var(--text);display:block}.lockup svg{width:auto;height:100%}header nav{color:var(--text-2);gap:24px;margin-left:auto;font-size:15px;display:flex}header nav a{transition:color .2s}header nav a:hover{color:var(--text)}.btn{white-space:nowrap;border-radius:999px;justify-content:center;align-items:center;gap:8px;height:48px;padding:0 24px;font-size:17px;font-weight:500;transition:transform .1s ease-out,opacity .2s;display:inline-flex}.btn:active{transform:scale(.97)}.btn-primary{background:var(--accent);color:var(--on-accent)}.btn-primary:hover{opacity:.86}.btn-secondary{background:var(--fill);color:var(--text)}.btn-small{height:36px;padding:0 16px;font-size:15px}.btn:focus-visible{box-shadow:none;opacity:.72;background-image:none}.hero{text-align:center;padding:96px 0 56px}.eyebrow{background:var(--fill);color:var(--text-2);border-radius:999px;align-items:center;gap:8px;margin:0 0 24px;padding:6px 14px;font-size:14px;display:inline-flex}.eyebrow i{background:var(--long);border-radius:50%;width:6px;height:6px}h1{letter-spacing:-.035em;text-wrap:balance;max-width:15ch;margin:0 auto;font-size:clamp(44px,7vw,84px);font-weight:600;line-height:1.02}.lead{max-width:34em;color:var(--text-2);text-wrap:pretty;margin:24px auto 0;font-size:clamp(19px,2vw,24px);line-height:1.33}.actions{flex-wrap:wrap;justify-content:center;gap:12px;margin-top:40px;display:flex}.fine{color:var(--text-2);margin:16px 0 0;font-size:14px}.desktop-note{display:none}.ticker{flex-wrap:wrap;justify-content:center;gap:8px 28px;min-height:22px;margin:48px 0 0;padding:0;font-size:15px;list-style:none;display:flex}.ticker li{align-items:baseline;gap:8px;display:flex}.ticker b{font-weight:600}.ticker .up{color:var(--long)}.ticker .down{color:var(--short)}.ticker .src{color:var(--text-2)}.shot{background:var(--surface);transform-origin:50% 0;border-radius:30px;margin-top:56px;padding:12px}.shot img{border-radius:20px;width:100%}section{padding:120px 0 0}.kicker{color:var(--text-2);margin:0 0 12px;font-size:15px;font-weight:600}h2{letter-spacing:-.025em;text-wrap:balance;max-width:18ch;margin:0;font-size:clamp(34px,4.4vw,48px);font-weight:600;line-height:1.08}.section-lead{max-width:36em;color:var(--text-2);margin:20px 0 0;font-size:19px;line-height:1.42}.signals{grid-template-columns:1.72fr 1fr;align-items:start;gap:16px;margin-top:48px;display:grid}.plate{background:var(--surface);border-radius:30px;overflow:hidden}.plate.pad{padding:12px}.plate.pad img{border-radius:20px;width:100%}.trio{grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px;display:grid}h3{letter-spacing:-.01em;margin:0 0 8px;font-size:21px;font-weight:600;line-height:1.2}.trio p,.points p{color:var(--text-2);margin:0}.split{grid-template-columns:1fr 380px;align-items:center;gap:64px;display:grid}.points{gap:28px;margin-top:40px;display:grid}.ticket{padding:12px}.ticket img{border-radius:20px}.cards{grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;display:grid}.card{background:var(--surface);border-radius:30px;padding:32px}.card p{color:var(--text-2);margin:0}.fees{grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px;display:grid}.fee{background:var(--surface);border-radius:30px;padding:32px}.fee .big{letter-spacing:-.025em;color:var(--text);margin:0 0 4px;font-size:48px;font-weight:600;line-height:1.08}.fee p{color:var(--text-2);margin:0}.fee p.what{color:var(--text);margin-bottom:16px;font-weight:500}.faq{max-width:820px;margin-top:40px}.faq details{border-bottom:1px solid var(--hairline)}.faq summary{cursor:pointer;justify-content:space-between;gap:24px;padding:22px 0;font-size:19px;font-weight:500;list-style:none;display:flex}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--text-2);transition:transform .3s var(--ease);font-weight:400}.faq details[open] summary:after{transform:rotate(45deg)}.faq details p{max-width:42em;color:var(--text-2);margin:-6px 0 24px}.closing{text-align:center;padding-top:140px}.closing h2{margin:0 auto}.closing .render{max-width:880px;margin:16px auto 0}.closing .render img{width:100%}footer{color:var(--text-2);margin-top:40px;padding:32px 0 48px;font-size:13px}footer .wrap{border-top:1px solid var(--hairline);flex-wrap:wrap;justify-content:space-between;gap:16px 32px;padding-top:24px;display:flex}footer p{max-width:60em;margin:0}.reveal{opacity:0;transition:opacity .8s var(--ease), transform .8s var(--ease);transform:translateY(24px)}.reveal.in,.no-js .reveal{opacity:1;transform:none}@media (width<=900px){header nav{display:none}header .btn{margin-left:auto}.hero{padding-top:56px}.hero .open-terminal,header .open-terminal{display:none}.desktop-note{display:block}.btn.desktop-note{display:inline-flex}.hero #beta{background:var(--accent);color:var(--on-accent)}.ticker .src{flex-basis:100%;justify-content:center}.signals,.trio,.split,.cards,.fees{grid-template-columns:1fr}.trio{gap:28px}.split{gap:40px}.ticket{max-width:380px}section{padding-top:88px}.card,.fee{padding:24px}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transition:none;transform:none}.shot{transform:none!important}}</style>
+    <script type="module" crossorigin src="/assets/landing-C6nrDa95.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-P2Xu9kJm.js">
+  </head>
+  <body class="no-js">
+    <header>
+      <div class="wrap">
+        <a class="lockup" href="#top" aria-label="Candle">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 608.8 201.0" fill="currentColor"><path transform="translate(8 8) scale(7.3764)" d="M8.943 0.197Q8.976 0.000 9.176 0.000L11.376 0.000Q11.576 0.000 11.543 0.197L10.807 4.643Q10.774 4.840 10.974 4.840L14.449 4.840Q14.649 4.840 14.617 5.037L13.391 12.443Q13.358 12.640 13.158 12.640L11.808 12.640Q11.608 12.640 11.576 12.837L10.383 20.043Q10.350 20.240 10.150 20.240L6.675 20.240Q6.475 20.240 6.442 20.437L5.706 24.883Q5.674 25.080 5.474 25.080L3.274 25.080Q3.074 25.080 3.106 24.883L3.842 20.437Q3.875 20.240 3.675 20.240L0.200 20.240Q0.000 20.240 0.033 20.043L1.226 12.837Q1.258 12.640 1.458 12.640L2.808 12.640Q3.008 12.640 3.041 12.443L4.267 5.037Q4.299 4.840 4.499 4.840L7.974 4.840Q8.174 4.840 8.207 4.643Z"/><path transform="translate(148.2 150.5) scale(1.0)" d="M46.77852348993289 1.342281879194631Q32.95302013422819 1.342281879194631 22.986577181208055 -4.83221476510067Q13.020134228187919 -11.006711409395972 8.590604026845638 -22.81879194630872Q4.1610738255033555 -34.630872483221474 6.845637583892618 -51.40939597315436Q9.59731543624161 -67.6510067114094 17.516778523489933 -78.79194630872483Q25.436241610738254 -89.93288590604027 36.81208053691275 -95.63758389261744Q48.18791946308725 -101.34228187919463 61.14093959731544 -101.34228187919463Q70.53691275167785 -101.34228187919463 78.05369127516778 -98.8255033557047Q85.57046979865771 -96.30872483221476 90.80536912751677 -91.47651006711409Q96.04026845637584 -86.64429530201342 98.59060402684564 -79.66442953020135Q101.14093959731544 -72.68456375838926 100.53691275167785 -63.691275167785236H76.51006711409396Q76.64429530201342 -67.51677852348993 75.73825503355704 -70.57046979865771Q74.83221476510067 -73.6241610738255 72.85234899328859 -75.7718120805369Q70.87248322147651 -77.91946308724832 67.88590604026845 -79.06040268456375Q64.8993288590604 -80.20134228187919 60.939597315436245 -80.20134228187919Q53.355704697986575 -80.20134228187919 47.214765100671144 -76.44295302013423Q41.07382550335571 -72.68456375838926 36.91275167785235 -65.60402684563758Q32.75167785234899 -58.52348993288591 31.073825503355703 -48.59060402684564Q29.53020134228188 -38.993288590604024 31.140939597315437 -32.61744966442953Q32.75167785234899 -26.241610738255034 37.080536912751676 -23.02013422818792Q41.40939597315436 -19.798657718120804 48.12080536912752 -19.798657718120804Q52.41610738255034 -19.798657718120804 56.14093959731544 -20.872483221476507Q59.86577181208054 -21.946308724832214 62.919463087248324 -23.926174496644293Q65.97315436241611 -25.906040268456376 68.18791946308724 -28.7248322147651Q70.40268456375838 -31.543624161073826 71.61073825503355 -35.16778523489933H95.90604026845638Q94.16107382550335 -28.523489932885905 90.0 -22.04697986577181Q85.83892617449665 -15.570469798657719 79.59731543624162 -10.268456375838927Q73.35570469798658 -4.966442953020135 65.1006711409396 -1.812080536912752Q56.84563758389262 1.342281879194631 46.77852348993289 1.342281879194631ZM120.00671140939598 1.342281879194631Q112.89261744966444 1.2751677852348993 107.69127516778525 -1.1409395973154361Q102.48993288590604 -3.557046979865772 100.14093959731545 -8.48993288590604Q97.79194630872485 -13.422818791946309 98.93288590604027 -20.80536912751678Q100.00671140939598 -27.046979865771814 102.92617449664431 -31.308724832214764Q105.84563758389262 -35.57046979865772 110.14093959731545 -38.28859060402685Q114.43624161073826 -41.006711409395976 119.70469798657719 -42.41610738255034Q124.97315436241611 -43.8255033557047 130.74496644295303 -44.29530201342282Q137.18791946308727 -44.899328859060404 141.1812080536913 -45.53691275167785Q145.17449664429532 -46.1744966442953 147.22147651006713 -47.41610738255034Q149.26845637583892 -48.65771812080537 149.6711409395973 -50.939597315436245V-51.2751677852349Q150.20805369127518 -54.966442953020135 148.0268456375839 -57.01342281879195Q145.84563758389262 -59.06040268456376 141.41610738255034 -59.12751677852349Q136.78523489932888 -59.06040268456376 133.46308724832215 -57.01342281879195Q130.14093959731545 -54.966442953020135 128.73154362416108 -51.40939597315436L106.98657718120806 -52.147651006711406Q109.0 -58.993288590604024 114.0 -64.39597315436242Q119.0 -69.79865771812081 126.68456375838926 -72.88590604026845Q134.36912751677852 -75.97315436241611 144.50335570469798 -75.97315436241611Q151.61744966442953 -75.97315436241611 157.3557046979866 -74.29530201342283Q163.09395973154363 -72.61744966442953 167.0536912751678 -69.39597315436242Q171.01342281879195 -66.1744966442953 172.72483221476512 -61.54362416107382Q174.43624161073825 -56.91275167785235 173.4295302013423 -51.006711409395976L164.90604026845637 0.0H142.5570469798658L144.3020134228188 -10.536912751677852H143.6979865771812Q141.01342281879195 -6.644295302013423 137.48993288590606 -4.026845637583893Q133.96644295302013 -1.4093959731543624 129.60402684563758 -0.06711409395973156Q125.24161073825505 1.2751677852348993 120.00671140939598 1.342281879194631ZM130.006711409396 -14.36241610738255Q133.76510067114094 -14.36241610738255 137.12080536912754 -15.939597315436242Q140.4765100671141 -17.516778523489933 142.8255033557047 -20.268456375838927Q145.17449664429532 -23.02013422818792 145.7785234899329 -26.711409395973156L146.85234899328862 -33.758389261744966Q145.84563758389262 -33.22147651006711 144.3020134228188 -32.785234899328856Q142.75838926174498 -32.348993288590606 140.94630872483222 -31.97986577181208Q139.13422818791946 -31.610738255033556 137.32214765100673 -31.34228187919463Q135.51006711409397 -31.073825503355703 133.83221476510067 -30.738255033557046Q130.34228187919464 -30.268456375838927 127.79194630872485 -29.093959731543624Q125.24161073825505 -27.91946308724832 123.69798657718121 -26.174496644295303Q122.15436241610739 -24.42953020134228 121.751677852349 -21.946308724832214Q121.21476510067114 -18.322147651006713 123.53020134228188 -16.34228187919463Q125.84563758389262 -14.36241610738255 130.006711409396 -14.36241610738255ZM206.18791946308727 -42.75167785234899 199.07382550335572 0.0H175.1812080536913L187.66442953020137 -75.03355704697987H211.28859060402687L209.07382550335572 -61.20805369127517H209.6107382550336Q213.16778523489936 -68.05369127516778 219.510067114094 -72.01342281879195Q225.85234899328862 -75.97315436241611 234.17449664429532 -75.97315436241611Q242.0268456375839 -75.97315436241611 247.29530201342283 -72.4496644295302Q252.56375838926175 -68.9261744966443 254.74496644295303 -62.61744966442953Q256.9261744966443 -56.308724832214764 255.44966442953023 -47.785234899328856L247.53020134228188 0.0H223.63758389261747L230.81879194630875 -43.08724832214765Q231.89261744966444 -49.328859060402685 229.30872483221478 -52.85234899328859Q226.72483221476512 -56.375838926174495 221.02013422818794 -56.375838926174495Q217.26174496644296 -56.375838926174495 214.17449664429532 -54.76510067114094Q211.08724832214767 -53.15436241610738 208.97315436241612 -50.100671140939596Q206.85906040268458 -47.04697986577181 206.18791946308727 -42.75167785234899ZM284.9865771812081 1.0738255033557047Q276.6644295302014 1.0738255033557047 270.55704697986585 -3.221476510067114Q264.44966442953023 -7.516778523489933 261.83221476510073 -16.107382550335572Q259.2147651006712 -24.697986577181208 261.2953020134229 -37.4496644295302Q263.510067114094 -50.671140939597315 269.1140939597316 -59.194630872483216Q274.71812080536915 -67.71812080536913 282.2348993288591 -71.84563758389262Q289.751677852349 -75.97315436241611 297.5369127516779 -75.97315436241611Q303.44295302013427 -75.97315436241611 307.3355704697987 -73.95973154362417Q311.22818791946315 -71.94630872483222 313.4093959731544 -68.75838926174497Q315.59060402684565 -65.57046979865771 316.4630872483222 -62.147651006711406H316.9328859060403L323.2416107382551 -100.0H347.0671140939598L330.55704697986585 0.0H306.9328859060403L308.94630872483225 -12.21476510067114H308.1409395973155Q306.06040268456377 -8.724832214765101 302.80536912751677 -5.671140939597316Q299.5503355704698 -2.61744966442953 295.0872483221477 -0.7718120805369127Q290.6241610738255 1.0738255033557047 284.9865771812081 1.0738255033557047ZM296.1275167785235 -17.516778523489933Q300.5570469798658 -17.516778523489933 304.0805369127517 -20.0Q307.60402684563763 -22.483221476510067 310.020134228188 -26.946308724832214Q312.4362416107383 -31.409395973154364 313.44295302013427 -37.4496644295302Q314.44966442953023 -43.624161073825505 313.54362416107386 -48.053691275167786Q312.6375838926175 -52.48322147651007 309.91946308724835 -54.93288590604027Q307.20134228187925 -57.38255033557047 302.77181208053696 -57.38255033557047Q298.3422818791947 -57.38255033557047 294.88590604026854 -54.899328859060404Q291.42953020134235 -52.41610738255034 289.1476510067115 -47.95302013422819Q286.8657718120806 -43.48993288590604 285.8590604026846 -37.4496644295302Q284.8523489932886 -31.476510067114095 285.6577181208054 -26.97986577181208Q286.4630872483222 -22.483221476510067 289.1140939597316 -20.0Q291.765100671141 -17.516778523489933 296.1275167785235 -17.516778523489933ZM381.2348993288591 -100.0 364.5906040268457 0.0H340.69798657718127L357.3422818791947 -100.0ZM411.2416107382551 1.4093959731543624Q399.42953020134235 1.4093959731543624 391.34228187919473 -3.2550335570469797Q383.25503355704706 -7.919463087248322 379.79865771812086 -16.610738255033556Q376.3422818791947 -25.302013422818792 378.35570469798665 -37.38255033557047Q380.30201342281885 -48.92617449664429 385.9395973154363 -57.61744966442953Q391.57718120805373 -66.30872483221476 400.3355704697987 -71.14093959731544Q409.0939597315437 -75.97315436241611 420.3691275167786 -75.97315436241611Q428.4228187919464 -75.97315436241611 434.8657718120806 -73.45637583892618Q441.3087248322148 -70.93959731543625 445.60402684563763 -66.04026845637584Q449.89932885906046 -61.14093959731544 451.6107382550336 -53.993288590604024Q453.32214765100673 -46.84563758389262 451.84563758389265 -37.58389261744966L450.8389261744967 -31.74496644295302H385.67114093959736L387.9530201342282 -45.50335570469799H441.7785234899329L430.10067114093965 -42.41610738255034Q430.97315436241615 -47.51677852348993 430.3691275167786 -51.1744966442953Q429.765100671141 -54.83221476510067 427.4161073825504 -56.81208053691275Q425.0671140939598 -58.79194630872483 420.57046979865777 -58.79194630872483Q416.07382550335575 -58.79194630872483 412.28187919463096 -56.77852348993289Q408.4899328859061 -54.76510067114094 405.97315436241615 -51.14093959731544Q403.45637583892625 -47.51677852348993 402.6510067114094 -42.61744966442953L401.0402684563759 -32.75167785234899Q400.1677852348994 -27.449664429530202 400.97315436241615 -23.65771812080537Q401.7785234899329 -19.86577181208054 404.5973154362416 -17.85234899328859Q407.41610738255036 -15.838926174496644 412.51677852348996 -15.838926174496644Q415.87248322147656 -15.838926174496644 418.6912751677853 -16.711409395973153Q421.510067114094 -17.583892617449663 423.6577181208054 -19.328859060402685Q425.8053691275168 -21.073825503355703 427.0805369127517 -23.48993288590604L448.8926174496645 -22.751677852348994Q446.3422818791947 -15.369127516778523 441.2080536912752 -9.93288590604027Q436.07382550335575 -4.496644295302014 428.55704697986585 -1.5436241610738257Q421.0402684563759 1.4093959731543624 411.2416107382551 1.4093959731543624Z"/></svg>
+        </a>
+        <nav aria-label="Sections">
+          <a href="#signals">Signals</a>
+          <a href="#risk">Risk</a>
+          <a href="#account">Account</a>
+          <a href="#fees">Fees</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-secondary btn-small open-terminal" href="/trade">Open terminal</a>
+        <a class="btn btn-secondary btn-small desktop-note" href="#beta">Beta</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="hero wrap">
+        <p class="eyebrow"><i aria-hidden="true"></i>Closed beta · Hyperliquid perps and spot</p>
+        <h1>See where the market leans before you trade.</h1>
+        <p class="lead">
+          Candle is a desktop terminal for Hyperliquid. Liquidation levels, how top traders are positioned and the
+          wallets you follow sit right next to the order ticket. Nothing to set up.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary open-terminal" href="/trade">Open the terminal</a>
+          <a class="btn btn-secondary" id="beta" href="mailto:founder@candle.trading?subject=Candle%20beta">Request beta access</a>
+        </div>
+        <p class="fine open-terminal">Market data is open to everyone. Trading opens to beta members first.</p>
+        <p class="fine desktop-note">Candle is built for desktop. Open candle.trading on your computer to try it.</p>
+
+        <ul class="ticker num" id="ticker" aria-live="off" aria-label="Live prices from Hyperliquid"></ul>
+
+        <div class="shot" id="shot">
+          <picture>
+            <source srcset="/assets/terminal-light-Zdtg_dQ6.jpg" media="(prefers-color-scheme: light)" />
+            <img
+              src="/assets/terminal-dark-3tJWFAxi.jpg"
+              width="2880"
+              height="1800"
+              alt="The Candle trade screen: ETH chart with position levels, order book, order ticket with leverage dial, and a signals column with positioning, liquidations and tracked wallets."
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <section id="signals">
+        <div class="wrap">
+          <p class="kicker">Three signals, one screen</p>
+          <h2 class="reveal">The context you open three tabs for, next to the ticket.</h2>
+          <p class="section-lead reveal">
+            Each signal is one line you can read in a second. Open it when you want the full map.
+          </p>
+          <div class="signals reveal">
+            <div class="plate pad">
+              <picture>
+                <source srcset="/assets/chart-light-Dxw8-WNz.jpg" media="(prefers-color-scheme: light)" />
+                <img src="/assets/chart-dark-D5fdn8Hh.jpg" width="1113" height="1041" loading="lazy" alt="ETH chart with entry, stop loss, take profit, liquidation price and the nearest liquidation cluster marked at the edge." />
+              </picture>
+            </div>
+            <div class="plate pad">
+              <picture>
+                <source srcset="/assets/signals-light-BbL_qSJJ.jpg" media="(prefers-color-scheme: light)" />
+                <img src="/assets/signals-dark-CNSAafj-.jpg" width="571" height="922" loading="lazy" alt="Signals for ETH: top-PnL traders 78% short, liquidation clusters above and below price, and three tracked wallets holding ETH." />
+              </picture>
+            </div>
+          </div>
+          <div class="trio">
+            <div class="reveal">
+              <h3>Liquidations</h3>
+              <p>Where forced orders cluster above and below price, how big they are and how far away. Drawn on your chart.</p>
+            </div>
+            <div class="reveal">
+              <h3>Positioning</h3>
+              <p>How top-PnL traders and small accounts lean on this market, and how that changed over the day.</p>
+            </div>
+            <div class="reveal">
+              <h3>Your wallets</h3>
+              <p>Follow any Hyperliquid address. See what they hold here, their fills on the chart, and get alerts when they move.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="risk">
+        <div class="wrap split">
+          <div>
+            <p class="kicker">Risk</p>
+            <h2 class="reveal">Leverage, shown as distance to liquidation.</h2>
+            <div class="points">
+              <div class="reveal">
+                <h3>A dial that marks the danger zone</h3>
+                <p>Ticks show where liquidation comes within 20% and 10% of price. The number next to it is the distance, not just the multiplier.</p>
+              </div>
+              <div class="reveal">
+                <h3>Friction that grows with risk</h3>
+                <p>Ordinary orders go out on one click. Orders that put you close to liquidation ask you to hold the button. Each confirmation can be turned off.</p>
+              </div>
+              <div class="reveal">
+                <h3>Everything before you send</h3>
+                <p>Liquidation price, slippage, the exchange fee, the Candle fee and funding are on the ticket before the order leaves.</p>
+              </div>
+            </div>
+          </div>
+          <div class="plate ticket reveal">
+            <picture>
+              <source srcset="/assets/ticket-light-CZJ5P7Zl.jpg" media="(prefers-color-scheme: light)" />
+              <img src="/assets/ticket-dark-C8VSFZ7n.jpg" width="607" height="1666" loading="lazy" alt="Order ticket: long, market order, leverage 3x with liquidation 32% away, take profit and stop loss, fees and estimated liquidation price." />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section id="account">
+        <div class="wrap">
+          <p class="kicker">Your account</p>
+          <h2 class="reveal">Your positions live on Hyperliquid.</h2>
+          <div class="cards">
+            <div class="card reveal">
+              <h3>Sign in your way</h3>
+              <p>Google, Apple or email. Already trade on Hyperliquid? Import your account’s key and keep your history.</p>
+            </div>
+            <div class="card reveal">
+              <h3>Orders go to Hyperliquid</h3>
+              <p>Candle is a terminal, not an exchange. The trading key it uses can place and cancel orders. It cannot withdraw.</p>
+            </div>
+            <div class="card reveal">
+              <h3>Deposit what you hold</h3>
+              <p>USDC from major networks, or native BTC, ETH and SOL, which land on Hyperliquid spot as they are.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fees">
+        <div class="wrap">
+          <p class="kicker">Fees</p>
+          <h2 class="reveal">One fee on top of Hyperliquid’s, shown on every order.</h2>
+          <div class="fees">
+            <div class="fee reveal">
+              <p class="big num">0.05%</p>
+              <p class="what">Candle fee per fill</p>
+              <p>Perps, HIP-3 and spot. You approve it once in your wallet and can revoke it in Account.</p>
+            </div>
+            <div class="fee reveal">
+              <p class="big">+ exchange fee</p>
+              <p class="what">Hyperliquid’s own fee, unchanged</p>
+              <p>Paid to Hyperliquid at your fee tier. The ticket shows both before you send.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap">
+          <p class="kicker">Questions</p>
+          <h2 class="reveal">Before you ask.</h2>
+          <div class="faq">
+            <details>
+              <summary>Is Candle an exchange?</summary>
+              <p>No. Trades execute on Hyperliquid, and your positions show up in any Hyperliquid interface.</p>
+            </details>
+            <details>
+              <summary>Which markets can I trade?</summary>
+              <p>Hyperliquid perpetuals, HIP-3 markets and spot.</p>
+            </details>
+            <details>
+              <summary>Where does the data come from?</summary>
+              <p>
+                Prices, the order book and trades come straight from Hyperliquid. Liquidation levels and positioning are
+                computed by Candle from open positions on Hyperliquid.
+              </p>
+            </details>
+            <details>
+              <summary>Is there a mobile app?</summary>
+              <p>Not yet. Candle is built for desktop browsers. iOS and Android apps come later.</p>
+            </details>
+            <details>
+              <summary>How do I get into the beta?</summary>
+              <p>
+                Write to <a href="mailto:founder@candle.trading?subject=Candle%20beta"><u>founder@candle.trading</u></a>
+                and tell us where you trade now. Invites go out in small batches.
+              </p>
+            </details>
+            <details>
+              <summary>Can I invite other traders?</summary>
+              <p>Yes. You get 25% of the Candle fee paid by traders who join with your link.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="wrap">
+          <h2 class="reveal">Trade with the map in view.</h2>
+          <div class="actions">
+            <a class="btn btn-primary open-terminal" href="/trade">Open the terminal</a>
+            <a class="btn btn-secondary" href="mailto:founder@candle.trading?subject=Candle%20beta">Request beta access</a>
+          </div>
+          <div class="render">
+            <picture>
+              <source srcset="/assets/hero-light-Buj8EiTj.jpg" media="(prefers-color-scheme: light)" />
+              <img src="/assets/hero-dark-DyxqKXJz.jpg" width="2000" height="1131" loading="lazy" alt="" />
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          Trading with leverage can lose you the margin you put in. Candle does not give investment advice. Candle is
+          not affiliated with Hyperliquid.
+        </p>
+        <p>© 2026 Candle · <a href="mailto:founder@candle.trading">founder@candle.trading</a></p>
+      </div>
+    </footer>
+
+  </body>
+</html>
