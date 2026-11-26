@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light dark" />
+<title>Risk Disclosure — Candle</title>
+<link rel="icon" href="/assets/favicon-DSx5xenb.svg" />
+<style>
+  :root { color-scheme: light dark; --bg: #fff; --fg: #0a0a0a; --muted: #6b6b6b; --soft: #f2f2f2; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0a0a0a; --fg: #f5f5f5; --muted: #9a9a9a; --soft: #1c1c1c; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; }
+  main { max-width: 70ch; margin: 0 auto; padding: 32px 16px 64px; }
+  nav { margin-bottom: 24px; font-size: 15px; } nav a { color: var(--muted); }
+  h1 { font-size: 32px; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 16px; }
+  h2 { font-size: 21px; margin: 32px 0 8px; } h3 { font-size: 17px; margin: 24px 0 8px; }
+  a { color: var(--fg); } .ph { background: var(--soft); border-radius: 4px; padding: 0 4px; }
+  .draft { background: var(--soft); border-radius: 16px; padding: 16px 20px; margin-bottom: 24px; font-size: 15px; }
+  .draft span { color: var(--muted); }
+  .table { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--soft); }
+  blockquote { margin: 0; padding-left: 16px; color: var(--muted); } code { font-size: 0.92em; }
+</style>
+</head>
+<body><main>
+<nav><a href="/">← candle.trading</a> · <a href="/terms">Terms</a> · <a href="/risk">Risk</a> · <a href="/privacy">Privacy</a></nav>
+<div class="draft" role="note"><b>Draft — not yet in effect.</b> <span>This text is under legal review. Parts in [square brackets] are still to be filled in.</span></div>
+<h1 id="candle-risk-disclosure">Candle Risk Disclosure</h1>
+<p><strong>Effective date:</strong> <span class="ph">[DATE]</span><br /><strong>Operator:</strong> <span class="ph">[Candle entity]</span></p>
+<hr />
+<blockquote><h3 id="in-plain-language">In plain language</h3>
+<ul><li><strong>You can lose all the money you put in — quickly.</strong> Leverage multiplies both gains and losses. A small price move can liquidate your position.</li><li><strong>Candle is only an interface.</strong> Trades are executed by Hyperliquid, a third-party blockchain. Candle does not hold your funds and cannot reverse trades.</li><li><strong>Nothing is guaranteed.</strong> Orders may not fill, or may fill at a worse price. Data and analytics may be late, incomplete, or marked &quot;Sample&quot;.</li><li><strong>HIP-3 markets are not shares.</strong> They are synthetic contracts from third-party deployers and can be halted or delisted.</li><li><strong>Your keys, your responsibility.</strong> If someone gets your private key, they can take your funds. Your trading key cannot withdraw, but it can trade.</li><li><strong>Scheduled buys run without you.</strong> They execute at market prices even when you are not watching.</li><li><strong>Nothing here is advice.</strong> Only trade with money you can afford to lose.</li></ul></blockquote>
+<hr />
+<h2 id="1-about-this-document">1. About this document</h2>
+<p>1.1. This Risk Disclosure forms part of the Candle <a href="/terms">Terms of Service</a>. It describes the main risks of using Candle to trade on Hyperliquid. It cannot list every risk. New risks may appear as markets, technology and regulation change.</p>
+<p>1.2. You should only trade if you understand these risks, and you should consider getting independent financial, legal and tax advice.</p>
+<h2 id="2-leverage-and-liquidation">2. Leverage and liquidation</h2>
+<p>2.1. <strong>Leverage magnifies losses.</strong> Perpetual futures let you control a position larger than your margin. With 10x leverage, a 10% adverse move can wipe out your entire margin; with higher leverage, much smaller moves can.</p>
+<p>2.2. <strong>Liquidation.</strong> If your account or position falls below the maintenance margin required by Hyperliquid, Hyperliquid can liquidate it automatically, wholly or partly, at prevailing market conditions. Liquidation usually means losing most or all of the margin for that position, and liquidation-related costs may apply.</p>
+<p>2.3. <strong>Distance to liquidation is an estimate.</strong> Candle may show your estimated liquidation price or distance to liquidation. These figures are calculated from current data and can change quickly with mark price, funding, fees, your other positions and Hyperliquid's margin rules. They are not guarantees.</p>
+<p>2.4. <strong>Cross vs isolated margin.</strong></p>
+<ul><li><strong>Cross margin</strong>: your available balance supports all your cross positions together. Losses on one position can draw on margin shared with others, and a large loss can lead to liquidation of several positions at once.</li><li><strong>Isolated margin</strong>: each position has its own margin. Your loss on that position is generally limited to the margin you assigned, but the position can be liquidated sooner because it cannot draw on the rest of your balance.</li></ul>
+<p>Make sure you know which mode each position uses before trading.</p>
+<p>2.5. <strong>Leverage limits vary.</strong> Maximum leverage and margin requirements differ by market and may be changed by Hyperliquid or by a HIP-3 deployer at any time, which can affect existing positions.</p>
+<h2 id="3-funding-payments">3. Funding payments</h2>
+<p>Perpetual futures have no expiry. To keep their price close to the underlying reference price, long and short holders exchange periodic funding payments (on Hyperliquid, currently every hour). Funding can be positive or negative, can change sharply in volatile markets, and can significantly reduce your balance over time — even if the price does not move against you.</p>
+<h2 id="4-volatility-gaps-and-liquidity">4. Volatility, gaps and liquidity</h2>
+<p>4.1. Crypto assets and many HIP-3 reference assets are highly volatile. Prices can move sharply within seconds, including outside the trading hours of traditional markets.</p>
+<p>4.2. Prices can &quot;gap&quot;, jumping past your stop or limit price without trading at levels in between. Stop orders may then execute at a much worse price, or not at all.</p>
+<p>4.3. Liquidity can disappear. In thin markets, or during stress, the order book may not be deep enough to fill your order at a reasonable price, or at all.</p>
+<h2 id="5-orders-and-execution">5. Orders and execution</h2>
+<p>5.1. <strong>Slippage.</strong> Market orders and triggered orders fill at the best available prices at the moment of execution, which may be worse than the price shown when you clicked. Large orders can move the price against you. Slippage limits, where available, may cause your order not to fill.</p>
+<p>5.2. <strong>Execution is not guaranteed.</strong> Candle submits your signed instructions to Hyperliquid. Orders may be rejected, delayed, partially filled, or not filled because of market conditions, Hyperliquid rules (such as price bands, minimum sizes or open-interest caps), network congestion, outages of Candle or Hyperliquid, or errors.</p>
+<p>5.3. <strong>Order types behave differently.</strong> Limit, market, stop-loss, take-profit, reduce-only and other order types each have specific rules. A take-profit or stop-loss is not a guarantee that a loss will be limited or a profit realised. Make sure you understand each order type before using it.</p>
+<p>5.4. <strong>What you see may lag.</strong> The order book, positions and balances shown in Candle can lag behind the actual state on Hyperliquid. Hyperliquid's on-chain state is authoritative.</p>
+<h2 id="6-oracle-and-mark-price">6. Oracle and mark price</h2>
+<p>Hyperliquid uses oracle prices (based on prices from external venues, published through its validators) and a mark price to determine funding, unrealised profit and loss, margin and liquidations. The mark price can differ from the last traded price in Candle's chart. Oracle inputs can be wrong, delayed or manipulated, and external venues can fail. HIP-3 markets may use different oracle sources set by their deployers. An incorrect oracle or mark price can trigger liquidations that would not otherwise have occurred.</p>
+<h2 id="7-hyperliquid-protocol-risks">7. Hyperliquid protocol risks</h2>
+<p>7.1. <strong>Third-party protocol.</strong> Hyperliquid is an independent Layer-1 blockchain. Candle does not control it. Its software, consensus, validators, bridge and smart contracts may contain bugs, be exploited, be upgraded in ways that change how markets work, or stop functioning.</p>
+<p>7.2. <strong>Validators and network.</strong> Hyperliquid relies on a set of validators. Validator failures, collusion, governance decisions, or network halts can delay or block transactions, freeze markets, or lead to state changes outside your control.</p>
+<p>7.3. <strong>Bridge risk.</strong> Funds deposited to Hyperliquid typically pass through a bridge. A bridge failure or exploit could result in loss or freezing of funds.</p>
+<p>7.4. <strong>HLP and auto-deleveraging (ADL).</strong> Hyperliquid uses a community vault (HLP) and other mechanisms to take over liquidated positions. If these cannot absorb losses during extreme moves, Hyperliquid may <strong>auto-deleverage</strong>: it can forcibly reduce or close profitable positions on the opposite side — possibly including yours — at a price you did not choose. ADL can close a winning position at an inopportune time.</p>
+<p>7.5. <strong>Rule changes and interventions.</strong> Hyperliquid may change fees, margin rules, listed markets, or other parameters, and has in the past taken exceptional actions during market events. Such actions may affect your positions.</p>
+<h2 id="8-hip-3-markets">8. HIP-3 markets</h2>
+<p>8.1. <strong>Third-party deployers.</strong> HIP-3 markets are created and operated by third-party deployers (for example, the <code>xyz</code> deployer), not by Candle or, necessarily, by Hyperliquid's core contributors. Deployers may set and change the oracle, leverage limits, margin rules, fees, trading hours and other parameters.</p>
+<p>8.2. <strong>Synthetic exposure only.</strong> HIP-3 markets that reference shares, indices or commodities are synthetic perpetual contracts. <strong>They are not shares, ETFs or commodities</strong>, and give you no ownership, voting, dividend, delivery or any other rights in the underlying asset or issuer.</p>
+<p>8.3. <strong>Halts and delisting.</strong> A HIP-3 market can be halted, settled at a deployer-determined price, or delisted at any time, including because the deployer stops operating, an oracle fails, or law changes. You may be unable to close or adjust a position while a market is halted.</p>
+<p>8.4. <strong>Reference-market differences.</strong> The underlying asset may trade only during exchange hours, while the HIP-3 market may trade continuously, which can cause large gaps when the reference market reopens. Corporate actions (splits, dividends, mergers) may not be reflected as you expect.</p>
+<p>8.5. <strong>Different oracle and leverage.</strong> HIP-3 markets may use different oracles and lower or higher leverage than core Hyperliquid perps. Check each market's details before trading.</p>
+<h2 id="9-spot-tokens">9. Spot tokens</h2>
+<p>Spot tokens on Hyperliquid range from established assets to newly launched tokens with little liquidity or history. Tokens may lose most or all of their value, be controlled by a small group of holders, have misleading names or tickers, or be the subject of scams. Wrapped or bridged assets (for example, assets deposited via Unit) depend on the provider that backs them; if that provider fails, the token may lose value or become non-redeemable.</p>
+<h2 id="10-stablecoins-and-usdc">10. Stablecoins and USDC</h2>
+<p>Margin and settlement on Hyperliquid are largely in USDC or other stablecoins. A stablecoin may lose its peg, be frozen or blacklisted by its issuer, or be affected by the failure of its issuer, reserves or banking partners, or by regulatory action. A de-peg can affect your collateral value and margin.</p>
+<h2 id="11-deposit-and-bridge-providers">11. Deposit and bridge providers</h2>
+<p>Deposits through Relay, Unit or Circle CCTP are handled by those independent providers under their own terms. Risks include: delays, failed or stuck transfers, fees higher than expected, smart-contract or operational failures of the provider, sending to the wrong address or network, and the provider suspending service. <strong>Candle never touches your funds during a deposit and cannot recover them.</strong></p>
+<h2 id="12-keys-account-security-and-phishing">12. Keys, account security and phishing</h2>
+<p>12.1. <strong>Private key.</strong> Whoever controls your wallet's private key controls your funds. If you export or import a private key and it is lost, stolen or exposed, your funds can be taken and cannot be recovered.</p>
+<p>12.2. <strong>Sign-in methods.</strong> Your Candle account is accessed through Privy using email, Google or Apple. If an attacker gains control of your email or social account, they may be able to access your account and wallet.</p>
+<p>12.3. <strong>Phishing.</strong> Attackers create fake websites, apps, ads, X accounts and support messages. Candle will <strong>never</strong> ask for your private key or sign-in code. Always check you are on https://candle.trading.</p>
+<h2 id="13-trading-key-and-automation">13. Trading key and automation</h2>
+<p>13.1. <strong>Trading key.</strong> Candle's trading key lets Candle's server place and cancel orders on your Hyperliquid account. It <strong>cannot withdraw</strong> your funds — but it <strong>can trade</strong>. If it is misused because of a bug, a compromise of Candle's systems, or an error, orders could be placed that cause losses. We store trading keys encrypted, but no security is perfect. You can revoke the trading key at any time in Account.</p>
+<p>13.2. <strong>Scheduled buys (DCA).</strong> A DCA plan runs automatically at the times you set, <strong>including when you are offline</strong>, and buys at the market price at that time — even during a crash, a spike, or low liquidity. Runs can be delayed, skipped or fail (for example, due to insufficient balance, a revoked or expired trading key, a market pause, or outages). DCA does not guarantee a better average price or protect against losses.</p>
+<p>13.3. <strong>Pauses.</strong> Candle may pause trading, specific markets or DCA plans in an emergency. During such a pause we aim to keep reduce-only orders, closing and cancelling available, but your positions on Hyperliquid stay open, can be liquidated, and keep paying or receiving funding.</p>
+<h2 id="14-data-analytics-and-alerts">14. Data, analytics and alerts</h2>
+<p>14.1. Candle's analytics — leaderboards, tracked-wallet activity, liquidation clusters, cohorts and similar — are derived mainly from public Hyperliquid data and may be delayed, incomplete, estimated or wrong. Coverage is shown where relevant, but analytics never reflect the whole market.</p>
+<p>14.2. Some screens may show illustrative data marked <strong>&quot;Sample&quot;</strong>. It is not real market data.</p>
+<p>14.3. Alerts can be late, duplicated or missed. Do not rely on alerts to manage risk.</p>
+<p>14.4. Past performance of any wallet, trader or strategy shown in Candle does not predict future results. Following or copying another wallet can lead to losses.</p>
+<h2 id="15-third-party-content">15. Third-party content</h2>
+<p>News headlines and X posts in Candle's feed come from third-party providers and authors. They may be inaccurate, outdated, promotional or deliberately misleading. They reflect their authors' opinions and are <strong>not investment advice</strong> or endorsed by Candle.</p>
+<h2 id="16-regulatory-and-legal-risk">16. Regulatory and legal risk</h2>
+<p>16.1. The legal treatment of crypto assets, perpetual futures, synthetic exposure to shares and commodities, and decentralised trading interfaces is uncertain and varies by country. Laws may change, and authorities may restrict or prohibit access to Hyperliquid, specific markets, or Candle, possibly with little notice.</p>
+<p>16.2. You are responsible for making sure that using Candle and trading on Hyperliquid is lawful where you live. You may not use Candle from a restricted territory or if you are a restricted person (see the Terms).</p>
+<h2 id="17-tax-risk">17. Tax risk</h2>
+<p>Trades, funding payments, liquidations, fees and referral rewards may have tax consequences, which can be complex and differ by country. Candle does not provide tax advice or tax reports. You are responsible for your own tax obligations.</p>
+<h2 id="18-interface-and-technology-risk">18. Interface and technology risk</h2>
+<p>The Candle Interface, its servers, and third-party services it relies on (such as Privy, AWS, Hyperliquid's API and data providers) can fail, be attacked, or be unavailable. Browser extensions, malware or an outdated browser on your device can interfere with what you see or sign. Candle is a beta product and may contain errors.</p>
+<h2 id="19-no-guarantee-of-profit">19. No guarantee of profit</h2>
+<p>There is no guarantee that you will make a profit or avoid losses. Most retail traders of leveraged products lose money. Do not trade with money you need for living expenses, and never borrow to trade.</p>
+<h2 id="20-acknowledgement">20. Acknowledgement</h2>
+<p>By using Candle you confirm that you have read and understood this Risk Disclosure, that you accept these risks, and that you are solely responsible for your trading decisions.</p>
+<p>Questions: support@candle.trading</p>
+</main></body>
+</html>
