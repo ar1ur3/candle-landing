@@ -1,0 +1,1 @@
+function e(e,t,n=!0){return n?t?{headers:{},credentials:`include`}:{headers:e?{Authorization:`Bearer ${e}`}:{}}:{headers:{}}}function t(e,t){return(e?.trim().replace(/\/+$/,``)??``)||(t?`http://127.0.0.1:8790`:``)}var n=t(void 0,!1);export{e as n,n as t};
